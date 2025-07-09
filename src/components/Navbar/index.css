@@ -1,0 +1,19 @@
+.link-style {
+	text-decoration: none;
+	align-self: center;
+}
+.navbar {
+	background-color: #003366;
+	padding: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+}
+.logo-profile-container {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+}

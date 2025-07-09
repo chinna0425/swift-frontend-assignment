@@ -1,0 +1,121 @@
+.profile-screen-container {
+	display: flex;
+	justify-content: center;
+}
+.profile-screen-inner-container {
+	width: 95%;
+	margin-top: 20px;
+}
+.welcome-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.left-arrow {
+	height: 30px;
+	width: 30px;
+	margin-right: 15px;
+}
+
+.profile-link-style {
+	text-decoration: none;
+	margin: 0px;
+	margin-top: 8px;
+	padding: 0px;
+}
+.profile-name-title {
+	font-family: "Roboto";
+	font-size: 24px;
+	font-weight: 600;
+	color: #1f3d7a;
+	margin: 0px;
+}
+.profile-info-container {
+	border-radius: 10px;
+	background-color: antiquewhite;
+	padding: 25px;
+}
+.profile-dp-format {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.dp-logo-style {
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-family: "Roboto";
+	font-weight: 600;
+	color: #1f3d7a;
+	margin-right: 15px;
+}
+.profile-title {
+	margin: 0px;
+	font-size: 24px;
+	font-weight: 600;
+}
+.profile-desc {
+	margin: 0px;
+	font-size: 18px;
+	font-weight: 500;
+}
+.user-name-container {
+	display: flex;
+	justify-content: space-between;
+}
+.email-address-container {
+	display: flex;
+	justify-content: space-between;
+}
+.field-set {
+	width: 48%;
+	margin-bottom: 18px;
+}
+
+.label-text {
+	font-size: 18px;
+	font-family: "Roboto";
+	font-weight: 500;
+}
+.profile-input-field {
+	width: 100%;
+	height: 33px;
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 5px;
+	padding-left: 15px;
+	border-style: solid;
+	margin-top: 8px;
+}
+.loader-container {
+	width: 100%;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+	.profile-name-title {
+		font-size: 16px;
+	}
+	.left-arrow {
+		height: 15px;
+		width: 15px;
+		margin-right: 10px;
+	}
+	.profile-info-container {
+		padding: 13px;
+	}
+	.profile-screen-container {
+		padding-bottom: 10px;
+	}
+}

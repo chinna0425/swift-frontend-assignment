@@ -1,0 +1,61 @@
+.not-found-page-container {
+	display: flex;
+	height: 85vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.not-found-image {
+	width: 400px;
+	height: 400px;
+}
+.not-found-title {
+	font-family: "Roboto";
+	font-size: 32px;
+	font-weight: 600;
+	color: #3e4c59;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.not-found-para {
+	font-family: "Roboto";
+	font-size: 20px;
+	font-weight: 500;
+	color: #3e4c59;
+	margin-top: 10px;
+	text-align: center;
+}
+.not-found-button-style {
+	font-family: "Roboto";
+	font-size: 16px;
+	background-color: #f7931e;
+	color: #ffffff;
+	padding: 20px;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-radius: 6px;
+	border-width: 0px;
+	cursor: pointer;
+	outline: none;
+	margin-left: 6px;
+}
+
+@media screen and (max-width: 576px) {
+	.not-found-title {
+		font-size: 24px;
+	}
+	.not-found-para {
+		font-size: 18px;
+	}
+	.not-found-image {
+		width: 120px;
+		height: 120px;
+	}
+	.not-found-button-style {
+		font-size: 14px;
+		padding: 15px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}
