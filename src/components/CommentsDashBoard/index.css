@@ -17,6 +17,7 @@
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 10px;
+	z-index: 10;
 }
 .sorting-button-container {
 	display: flex;
@@ -101,16 +102,39 @@
 
 .table-container {
 	margin-top: 20px;
+	background-color: #ffffff;
+	max-height: calc(100vh - 200px);
+	overflow-y: auto;
+	scroll-behavior: smooth;
 }
+
 .table-styling {
 	border-collapse: collapse;
 	width: 100%;
 	font-family: "Roboto";
 	color: #0077b3;
 }
+.table-styling thead th {
+	position: sticky;
+	top: 0;
+	background-color: #beb9b9;
+	z-index: 10;
+}
 
+@media screen and (max-width: 768px) {
+	.table-container {
+		min-height: calc(100vh - 240px);
+	}
+}
+@media screen and (max-width: 884px) {
+	.table-container {
+		min-height: calc(100vh - 208px);
+	}
+}
 .cell-style {
 	border: 1px solid #ccc;
+	border-left-style: none;
+	border-right-style: none;
 	padding: 12px;
 	text-align: left;
 	vertical-align: top;
@@ -164,6 +188,8 @@ td {
 	}
 	.cell-style {
 		border: 1px solid #ccc;
+		border-left-width: 0px;
+		border-right-width: 0px;
 		padding: 6px;
 	}
 	th {

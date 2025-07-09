@@ -6,6 +6,9 @@ import "./index.css";
 
 const ProfileScreen = () => {
 	const [firstUser, setFirstUser] = useState(null);
+
+	// fetching first userdata
+
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await fetch(

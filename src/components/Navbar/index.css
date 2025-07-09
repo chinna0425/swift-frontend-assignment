@@ -3,6 +3,10 @@
 	align-self: center;
 }
 .navbar {
+	position: sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 	background-color: #003366;
 	padding: 15px;
 	padding-top: 8px;

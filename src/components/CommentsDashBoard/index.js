@@ -167,21 +167,25 @@ class CommentsDashBoard extends Component {
 	};
 
 	// Render pagination controls based on the total number of pages
-	// It shows buttons for navigating to the first, previous, next, and last pages,
+	// It shows the first, previous, next, and last buttons along with the page numbers
 
 	renderPaginationControls = (totalPages) => {
 		const { currentPage } = this.state;
-		const visiblePages = [currentPage, currentPage + 1].filter(
-			(p) => p <= totalPages
-		);
+		const visiblePages = [];
+
+		if (totalPages <= 3) {
+			for (let i = 1; i <= totalPages; i++) visiblePages.push(i);
+		} else if (currentPage === 1) {
+			visiblePages.push(1, 2, 3);
+		} else if (currentPage === totalPages) {
+			visiblePages.push(totalPages - 2, totalPages - 1, totalPages);
+		} else {
+			visiblePages.push(currentPage - 1, currentPage, currentPage + 1);
+		}
 
 		return (
 			<div className="pagination-controls">
-				<button
-					type="button"
-					onClick={() => this.setPage(1)}
-					disabled={currentPage === 1}
-				>
+				<button onClick={() => this.setPage(1)} disabled={currentPage === 1}>
 					«
 				</button>
 				<button
@@ -194,8 +198,8 @@ class CommentsDashBoard extends Component {
 
 				{visiblePages.map((page) => (
 					<button
-						type="button"
 						key={page}
+						type="button"
 						onClick={() => this.setPage(page)}
 						className={page === currentPage ? "active-page" : ""}
 					>
